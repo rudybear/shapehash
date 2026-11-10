@@ -8,6 +8,11 @@ crude coloured mesh, shown while the real glTF loads.
 Duck, 61 bytes:  KP-7IIeYhN8MTRxyIo6zkoN2mVGsaxt1PvKrZQpKx3LcyM40jRs6n9qwS0PrIygZOaO5rfsaUKu1esoNJA
 ```
 
+![DCTHash and ShapeHash overview](docs/overview.png)
+
+*ShapeHash next to its 2D sibling, [DCTHash](https://github.com/rudybear/dcthash), which does
+the same for images at BlurHash's string length.*
+
 ![ShapeHash demo: Duck at 64 bytes](results/v1/demo/duck_64.png)
 
 *The demo page: original GLB on the left, the placeholder decoded from the string on the right.
