@@ -1,0 +1,30 @@
+[  91.9s] DamagedHelmet: 25 rows, 0 errors
+[ 117.5s] SheenChair: 25 rows, 0 errors
+[ 120.2s] MaterialsVariantsShoe: 25 rows, 0 errors
+[ 128.0s] Suzanne: 25 rows, 0 errors
+[ 129.6s] DiffuseTransmissionPlant: 25 rows, 0 errors
+[ 140.0s] BoomBox: 25 rows, 0 errors
+[ 140.3s] Duck: 25 rows, 0 errors
+[ 147.0s] WaterBottle: 25 rows, 0 errors
+[ 148.5s] IridescenceLamp: 25 rows, 1 errors
+    mesh1 32 ValueError: nothing fits in 32 bytes
+[ 150.8s] AntiqueCamera: 25 rows, 0 errors
+[ 155.4s] GlamVelvetSofa: 25 rows, 0 errors
+[ 156.5s] BrainStem: 25 rows, 0 errors
+[ 157.8s] Lantern: 25 rows, 1 errors
+    mesh1 32 ValueError: nothing fits in 32 bytes
+[ 158.2s] ChairDamaskPurplegold: 25 rows, 0 errors
+[ 162.9s] ToyCar: 25 rows, 0 errors
+[ 166.5s] ProcTorus: 25 rows, 0 errors
+[ 171.7s] Avocado: 25 rows, 0 errors
+[ 172.6s] CesiumMilkTruck: 25 rows, 0 errors
+[ 172.6s] Corset: 25 rows, 0 errors
+[ 173.2s] CesiumMan: 25 rows, 0 errors
+[ 174.6s] BarramundiFish: 25 rows, 0 errors
+[ 176.8s] RiggedFigure: 25 rows, 0 errors
+[ 179.2s] ProcTable: 25 rows, 0 errors
+[ 179.4s] Fox: 25 rows, 0 errors
+[ 180.4s] ProcDumbbell: 25 rows, 0 errors
+[ 184.3s] SunglassesKhronos: 25 rows, 0 errors
+[ 184.8s] BoxTextured: 25 rows, 0 errors
+[ 187.3s] BoxVertexColors: 25 rows, 0 errors

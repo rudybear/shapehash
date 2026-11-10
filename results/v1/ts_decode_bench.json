@@ -1,0 +1,111 @@
+{
+ "node": "v22.23.4",
+ "rows": [
+  {
+   "budget": 64,
+   "method": "vox (smooth)",
+   "hashes": 10,
+   "median_ms": 0.751,
+   "max_ms": 6.007,
+   "median_triangles": 3784
+  },
+  {
+   "budget": 64,
+   "method": "vox (cubes)",
+   "hashes": 10,
+   "median_ms": 0.126,
+   "max_ms": 1.245,
+   "median_triangles": 992
+  },
+  {
+   "budget": 64,
+   "method": "sh",
+   "hashes": 10,
+   "median_ms": 0.182,
+   "max_ms": 0.196,
+   "median_triangles": 1280
+  },
+  {
+   "budget": 64,
+   "method": "mesh",
+   "hashes": 10,
+   "median_ms": 0.008,
+   "max_ms": 0.008,
+   "median_triangles": 22
+  },
+  {
+   "budget": 128,
+   "method": "vox (smooth)",
+   "hashes": 10,
+   "median_ms": 2.142,
+   "max_ms": 7.25,
+   "median_triangles": 7732
+  },
+  {
+   "budget": 128,
+   "method": "vox (cubes)",
+   "hashes": 10,
+   "median_ms": 0.293,
+   "max_ms": 1.543,
+   "median_triangles": 2008
+  },
+  {
+   "budget": 128,
+   "method": "sh",
+   "hashes": 10,
+   "median_ms": 1.205,
+   "max_ms": 1.214,
+   "median_triangles": 5120
+  },
+  {
+   "budget": 128,
+   "method": "mesh",
+   "hashes": 10,
+   "median_ms": 0.009,
+   "max_ms": 0.009,
+   "median_triangles": 44
+  },
+  {
+   "budget": 256,
+   "method": "vox (smooth)",
+   "hashes": 4,
+   "median_ms": 5.322,
+   "max_ms": 7.261,
+   "median_triangles": 18644
+  },
+  {
+   "budget": 256,
+   "method": "vox (cubes)",
+   "hashes": 4,
+   "median_ms": 0.987,
+   "max_ms": 1.523,
+   "median_triangles": 4720
+  },
+  {
+   "budget": 256,
+   "method": "sh",
+   "hashes": 3,
+   "median_ms": 2.352,
+   "max_ms": 2.357,
+   "median_triangles": 5120
+  },
+  {
+   "budget": 256,
+   "method": "mesh",
+   "hashes": 3,
+   "median_ms": 0.007,
+   "max_ms": 0.007,
+   "median_triangles": 95
+  }
+ ],
+ "sizes": {
+  "dist/decode.min.js": {
+   "bytes": 12402,
+   "gzip": 5528
+  },
+  "dist/index.min.js": {
+   "bytes": 41862,
+   "gzip": 17780
+  }
+ }
+}

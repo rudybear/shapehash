@@ -1,0 +1,317 @@
+# Example hashes (decode with: python -I scripts/hash3d_cli.py decode <hash> out.glb)
+
+- `Duck_016B_voxs.glb` (15 bytes, 20 chars, method `voxs`, picked by auto, score 0.684)
+
+  `UP-7AggRgN-A_3Og_uUo`
+
+- `Duck_032B_ellip.glb` (32 bytes, 43 chars, method `ellip`, picked by auto, score 0.841)
+
+  `YAk9r98ZELPwJkVq4zC0_oTH01vrgX_QNQftjIr1-gA`
+
+- `Duck_064B_sh.glb` (59 bytes, 79 chars, method `sh`, picked by auto, score 0.900)
+
+  `Jf-7IIe2r1M_WnifzOye3iZUctrG3XC8rNk-krHat7IzjSNHTqR2rBLRNskKBo5o6mt-NpQarU-yg0k`
+
+- `Duck_064B_voxs.glb` (61 bytes, 82 chars, method `voxs`, score 0.798)
+
+  `UP-7CBxRg7-h-h-B-B-h-h-h-h-h-h-h-h9h-B9B2ACdbghw-SrTf1hy_ecKiZStXJB1ADvxOK6i1c1l1A`
+
+- `Duck_064B_vox.glb` (61 bytes, 82 chars, method `vox`, score 0.693)
+
+  `QP-7CBxRg7-h-h-B-B-h-h-h-h-h-h-h-h9h-B9B2ACdbghw-SrTf1hy_ecKiZStXJB1ADvxOK6i1c1l1A`
+
+- `Duck_064B_mesh.glb` (64 bytes, 86 chars, method `mesh`, score 0.710)
+
+  `gP-7AwFAIlvwBkvPwBAWv0OgM_0Kkf_0FX4_0GUAP0NRBv0No1PsHvjf0HPL_0OcrfsPbYPF4_Ey5s4vcsiTlA`
+
+- `Duck_128B_sh.glb` (128 bytes, 171 chars, method `sh`, picked by auto, score 0.915)
+
+  `J_-7IIe2r1M_WnifzOye3iZUctrG3XC8rNk-krHat7IzjSNHTXGEHOjGDmOZFTGRcyLISdN0ZSfJ8ZNi1kGwbFkVta1cXTjN0XQg6DHta504yqR2rBLRNskKBo5o6mtOSRJRZMembR4VIS6-PpQqq4kkNG4pLVCyhUnUkwQymy4`
+
+- `Duck_256B_sh.glb` (256 bytes, 342 chars, method `sh`, picked by auto, score 0.934)
+
+  `Kf-7IIe2r1M_WnifzOye3iZUctrG3XC8rNk-krHat7IzjSNHTXGEHOjGDmOZFTGRcyLISdN0ZSfJ8ZNi1kGwbFkVta1cXTjN0XQg6DHta504yU5rpQg6DmwbBr2vhCTWRi2E4SfJ0XMcxzXNdJ0orY1bmwdCL4ujBzoOi6MJRjBkoNc5zoPhF8HNc1rnQe6EHMcubnOc90HQhCMIug6LowjCEIvdCNSO1YJaJtkhQNHNHU1pySJKLJj0zaPCpCXRopo0w1VVnd2lGhpaqkGcnR3U2kssqsRcVnx9KFVXEkho3FJQVCkzK1VaabCKoWUKk6kmCGU2XKEqJQjSUqJJWg`
+
+- `Duck_256B_voxs.glb` (244 bytes, 326 chars, method `voxs`, score 0.874)
+
+  `UP-7FVDjFr-h-h-h-B-B-h-B-h-B-h-h-B-h-h-h-h-h-h-h-h-h-h-h2B2B-h-h-h-h-h-h-h-h-h8B9B-gP-F-koxIeOpmJ3BQL3Mv1AT4bvPjzu7rb8O_hIZnTdxX2cNrwSXEt-EtsP72QQFFkPZu8qvDQ9R-coK-fbcy1d7y-xKZ1Dmr5x90gIJr2hUkAFtx1yG31dCAIcaryCAsujcMwnlTAqaFQ_n9MewjMl6JgCNSuG6b9IJX8Hg9Hf6enV9xdPUJXxrTxoJ2zLr9H2F5omWArrokFN1H8WUVJAojzmkjhqRphCMRkJFJea5swoju4A`
+
+- `Duck_256B_vox.glb` (244 bytes, 326 chars, method `vox`, score 0.807)
+
+  `QP-7FVDjFr-h-h-h-B-B-h-B-h-B-h-h-B-h-h-h-h-h-h-h-h-h-h-h2B2B-h-h-h-h-h-h-h-h-h8B9B-gP-F-koxIeOpmJ3BQL3Mv1AT4bvPjzu7rb8O_hIZnTdxX2cNrwSXEt-EtsP72QQFFkPZu8qvDQ9R-coK-fbcy1d7y-xKZ1Dmr5x90gIJr2hUkAFtx1yG31dCAIcaryCAsujcMwnlTAqaFQ_n9MewjMl6JgCNSuG6b9IJX8Hg9Hf6enV9xdPUJXxrTxoJ2zLr9H2F5omWArrokFN1H8WUVJAojzmkjhqRphCMRkJFJea5swoju4A`
+
+- `Duck_256B_mesh.glb` (256 bytes, 342 chars, method `mesh`, score 0.907)
+
+  `gP-7DAXAHG_wACHf0BEif0DQDP0CQJP0Bidf0B2Nv0Bo6PsCJF_sCmSvwHlAP0EyAfwMAC_0NQKv0IAOf0Ei__wIFP_0HX7P0Enof0HX0v0MIEv0NVSf0MCg_0PTIf0MC_f0NU9_0Omnv0MILP0LqNf0H6d_0FqKv0Fp1f0FdGf0Gdb_0Kc9_0OK6vsN5kvkP51PcP9GPcN9WPsM-6ewYP6v0Iflf0H8CP0LqR_0LejNsOrjPgLP2v0PbYPbC9sP2J4vje2HyMnxXti8zxvjs_Q-vbIaPtsnJH56525y5u22yLyHQex_J-KaSNxqK5eLFSvLNPZJpdNp1Sq1un1GpA`
+
+- `Duck_512B_sh.glb` (501 bytes, 668 chars, method `sh`, picked by auto, score 0.938)
+
+  `K_-7IIe2r1M_WnifzOye3iZUctrG3XC8rNk-krHat7IzjSNHTXGEHOjGDmOZFTGRcyLISdN0ZSfJ8ZNi1kGwbFkVta1cXTjN0XQg6DHta504yU5rpQg6DmwbBr2vhCTWRi2E4SfJ0XMcxzXNdJ0orY1bmwdCL4ujBzoOi6MJRjBkoNc5zoPhF8HNc1rnQe6EHMcubnOc90HQhCMIug6LowjCEIvdCMnuc5rnNc2DYNhF0HwhCDoNe5rHRlCMIvk-D3whCEIug5z3wc9r3Oi50JNg5zXRc5znNe2DowhCEIOg6DoQfF0HydB8HQjCLoOg57nOdB0HPa9rnOa6LovbB7nQcx7oRhB8Hwe6EIOe6D4Oe50HQhKEIOfF74Pc5rnwhCD4Oc5znQfB0HOc5zoPhCDmubCFSO1YJaJtkhQNHNHU1pySJKLJj0zaPCpCXRopo0w1VVnd2lGhpaqkGcnR3U2kssqsRcViUhqixExMVVUskt1NqyqizFNCwiomUZU8zMLEysRMzEzUrU2qIzqyOkVEs0rTSsoqNMu601O0oqskpMNKKt2h1NLKLC1NQjLM1bUqzMonx9KFVXEkho3FJQVCkzK1VaabCLSYbbaa6UaUTTQUbaoWUKk6kmCGU2XKEqJQjSUqJJWkpKRKSRW1NIuxOFIg`
+
+- `Duck_1024B_sh.glb` (1013 bytes, 1351 chars, method `sh`, picked by auto, score 0.941)
+
+  `Lf-7IIe2r1M_WnifzOye3iZUctrG3XC8rNk-krHat7IzjSNHTXGEHOjGDmOZFTGRcyLISdN0ZSfJ8ZNi1kGwbFkVta1cXTjN0XQg6DHta504yU5rpQg6DmwbBr2vhCTWRi2E4SfJ0XMcxzXNdJ0orY1bmwdCL4ujBzoOi6MJRjBkoNc5zoPhF8HNc1rnQe6EHMcubnOc90HQhCMIug6LowjCEIvdCMnuc5rnNc2DYNhF0HwhCDoNe5rHRlCMIvk-D3whCEIug5z3wc9r3Oi50JNg5zXRc5znNe2DowhCEIOg6DoQfF0HydB8HQjCLoOg57nOdB0HPa9rnOa6LovbB7nQcx7oRhB8Hwe6EIOe6D4Oe50HQhKEIOfF74Pc5rnwhCD4Oc5znQfB0HOc5zoPhCDmubCDnRg5znwg6EIQhB8HPc57nOc50HQdCEIRe6DnRbGLoOa5zmwdBz3ug-DoOdB8Hvg-EIQdB0HOY6LoNc-MYQfBznOg-EIQfBz3Oc5znPc58IQe57nPc90YwY9z3Qc6Dnuc5znQfB8IQg-DoOhCEIQfBz2wg-D4Qg1tSO1YJaJtkhQNHNHU1pySJKLJj0zaPCpCXRopo0w1VVnd2lGhpaqkGcnR3U2kssqsRcViUhqixExMVVUskt1NqyqizFNCwiomUZU8zMLEysRMzEzUrU2qIzqyOkVEs0rTSsoqNMu601O0oqskpMNKKt2h1NLKLC1NQjLM1bUqzMok0qJTtKKiMtTM00qrJTTUrJvCyqVFVEq6pKwiqkrUrRotRKTVLSKyzEzMOzKzxU1TSq3NKkUiHLPKqqqysry8xERLKqpTRUJKxEUyzMzLS0S0KyqsLKuzRMrJotrJtUrKqsrDrKy00srUTLS0zMyzXUosWqHDQsKsrKsqMk1NS0IyrKwqqytDLLLMVMzUxSzEVFMzJCsjK0rSzCS0xKKttKPMKqqkrDo6NMVFSkLEzUVDSszFPEVMm0WrJEysq0rUMyqqwszEzEqqoytKSiKqtCzPx9KFVXEkho3FJQVCkzK1VaabCLSYbbaa6UaUTTQUbYc7pSUTTYTaSzJKo7bTVSjSiUlJGkSRpDpbZE4ooko9CZiClIYZXIqraqaUa0oalCzDCoUSc4bbKZFVYYZVTIrYTMSYVDCorLMqjDZJTSlKjVYoUTVSUYZDCTlVCyhUnUkwQymy5QlRKEaSlRJK0lJSJSSK2ppF2JwpGGSRNuJKR3GJJJuSOSRQqyRNJKSOKJJWkxtyJxptxyORWWJOJJuOSSKNuJJNpqOJRJxNRyJSUqSKJtSRJJSRxJuJSNKNxJJuOSORNRyRNNKJRyNqJRRJqKRRKSA`
+
+- `Fox_016B_voxs.glb` (15 bytes, 20 chars, method `voxs`, picked by auto, score 0.627)
+
+  `UCoPwAxjgNko-eUMC6o7`
+
+- `Fox_032B_ellip.glb` (32 bytes, 43 chars, method `ellip`, picked by auto, score 0.710)
+
+  `YAj79L4W9w7c32j3TsQ8ZCPz5wjQZ46mgjbhKhDxsoA`
+
+- `Fox_064B_voxs.glb` (64 bytes, 86 chars, method `voxs`, picked by auto, score 0.761)
+
+  `UCoPwy1zBdtNbpULsFsHsF1OkQezA4O1wEPCbkoGYGyOYS9118DVZHhe6r7AMcZBQU8A-VG3RFRm6gyEciWVxQ`
+
+- `Fox_064B_vox.glb` (64 bytes, 86 chars, method `vox`, score 0.685)
+
+  `QCoPwy1zBdtNbpULsFsHsF1OkQezA4O1wEPCbkoGYGyOYS9118DVZHhe6r7AMcZBQU8A-VG3RFRm6gyEciWVxQ`
+
+- `Fox_064B_sh.glb` (59 bytes, 79 chars, method `sh`, score 0.745)
+
+  `JSoP3zirqLJkRYf6EYog1rkwGaCIMPCkJrc1zHxg1TYycd5oUqr7GabY0abaoiGiodpvUC2k7AcFtJ0`
+
+- `Fox_064B_mesh.glb` (62 bytes, 83 chars, method `mesh`, score 0.725)
+
+  `gCoPwwExVFMhDc1dggdONps-ttk_KFNlHWg9psCBeuNSVYUfGLdlQl68laa_u25QK1MfbYPpB87A8Lw9Gmg`
+
+- `Fox_128B_ellip.glb` (128 bytes, 171 chars, method `ellip`, picked by auto, score 0.797)
+
+  `YCL81LnwLFNgn2BWNgO79lQT8tdAdx7bfjjZCRhbspFCwt8TIfZR2nRbpCu2ykEeDXwiK-uH4HmuhHi9bvv1NhDMs2mgmda-AhbsE--e5z1JjYKBatUJOaTqUCiyXxj3GQYqs1ukLFbBvtsNdCFcyEgbLa-GKrsG9Isx8EXvYMA`
+
+- `Fox_256B_voxs.glb` (240 bytes, 320 chars, method `voxs`, picked by auto, score 0.849)
+
+  `UCoPx2Lzl323sEyCpj1NsFsr1xsr21sFsFsFsF1v2TsFsFtLsFsFsFsFsFsFsFsFsFsFsqAG1xu2xbIKIop3_DjBDI527THNKeoudvuZinDHCVRGxpy-cdxjS10H-e6r6mRCyqpjVSPjPkB9KKGuMDoohaD_eAZA6LtF-avwTkDf3_7QA3ubL2_MkDSfWz997RFnCql0QpDOvTEoz2dH3HaH1_fi4PyF65YN1VPh7UALu72u4P2jaeB5Yxsd-Jz6wOA7TjioIHIkdchd7ySlY3l8M2pmqq-E5l1eLeH68XDpP1ayi6cr-ZQydmkGx2AO`
+
+- `Fox_256B_vox.glb` (240 bytes, 320 chars, method `vox`, score 0.816)
+
+  `QCoPx2Lzl323sEyCpj1NsFsr1xsr21sFsFsFsF1v2TsFsFtLsFsFsFsFsFsFsFsFsFsFsqAG1xu2xbIKIop3_DjBDI527THNKeoudvuZinDHCVRGxpy-cdxjS10H-e6r6mRCyqpjVSPjPkB9KKGuMDoohaD_eAZA6LtF-avwTkDf3_7QA3ubL2_MkDSfWz997RFnCql0QpDOvTEoz2dH3HaH1_fi4PyF65YN1VPh7UALu72u4P2jaeB5Yxsd-Jz6wOA7TjioIHIkdchd7ySlY3l8M2pmqq-E5l1eLeH68XDpP1ayi6cr-ZQydmkGx2AO`
+
+- `Fox_256B_sh.glb` (256 bytes, 342 chars, method `sh`, score 0.811)
+
+  `KSoP3zirqLJkRYf6EYog1rkwGaCIMPCkJrc1zHxg1TYycd5oUo5UEurZ8YNixzmvnCcKoc11INeqMIwq6birg6DnNhOD5Qm10JxlaE3sep0nLY-TlwU5j6oapzIRi1rYxi5kYxg9rVtgyEIUfSC3Tm5UIuo6UHQrODIMexrmxixrWxa97WOjBsHKbB0nrgqEoTgxsJwm9kGOo6rlTfN0XRhGLnOdGFVfYzTbGjTbVEQ0VDtNOb0sXDMzxLscS1uiPLzBw8srxDxDNDrTMyPDwrQ6Oj1LM7Q7K96gW0nY0mm02m3I41GnG205GmnIDgtpOxpNNptNuRxptONtpyNNOA`
+
+- `Fox_256B_mesh.glb` (251 bytes, 335 chars, method `mesh`, score 0.816)
+
+  `gCoPy8Wgj15Ygb69ghWXdpQW6NlQlKaYgvONlX_Mtgn9q9gndVtggbldgiqUtg_rFNgn5i9giXCNlCEztglmE9lSSk1MSQF1MdAGFMdSk1Mc11NlfUGKYvWntpfmqdlNQqlMSQq1MTCbVMS3L-twcedlYu-Nk__-NlP8s9g9MZ9gtoU9lNTS9g3yAv_rzQf7dnCNlGkgP_ijRut1J-v_o5tv7PbueuH6_-ytQbVMdT7WQcGLtt_bbbYH0W22B7dC59slgeC8Hie22F8N7YPiMXn4tFblIfcdbZDi8Z4b4do9NJNKOTdtjmd1Uez-XiyZNexvU6rL62MayMg`
+
+- `Fox_512B_voxs.glb` (463 bytes, 618 chars, method `voxs`, picked by auto, score 0.888)
+
+  `UCoPx2Lxl2pipipipj_921sEpipipj_9tLsFsFTFblbk6lsFsFsFsFtNsH1P2V1NsHtNsFsFsHspsFsFsFsFsFsF23_9sFsFsFsFsFsFsFsFsH_Z_9_9sFsFsFsFsFsFsFsFsHsp1NsFsF1Psopipipipj_9_ZsEyCpipj_91NsFsFbljlbo6n1xsHsF2V2T-3_9_92T_bsFsFsp_b_9_9sFsF_9_9_dsFsFsFsFsFsFsFsHsrsFsFsFsGpipipipipipipjsFsFsFLFTFblClsFsFsFsFsF1P1NsHsFsFsFsFsFsFsFsFsFsFsF1vsFsFsFsFsFsFsFsFsn_b_9sFsFsFsFsFsFsFsFsHspsFsF1vsoBtcbtsWyCiKKd_w4wQyOdu0xzSnqLnb7mYpwxwlURsacvnHcY0tdB_nuq-pkQsqqY1Uj4z5AfSihrjA6KIWg_3gGQOi7Rfmr8E5A39_-0AN7my9vzJA0n1s_fe0RZwqpdEKQzr0xKM9nR9x2h9f34uD8heuWDdVT4e1AC7u9ruD9o2ngeWMbHfic-sDgO044qCByJHXIXe8kpWN5fDNqZqqvhOZdXi3h-vFw6T9WsounK_mUMnZpBsdgDg`
+
+- `Fox_1024B_voxs.glb` (816 bytes, 1088 chars, method `voxs`, picked by auto, score 0.897)
+
+  `UCoPx2LxF2pipipipipipipixipipipipjsFsFsFsFLFClLFCjClsFsFsFsFsFblkFsFsFjlsFsFsFsFsFsFsF2V1vspsFsFsFsFsFsFsFsFsFsFsFsFsFsFsFsFsFsF1vsFsFsFsFsFsFsFsFsFsFsFsFsp-5sFsFsFsFsFsFsFsFsFsFsFsFsp_9_9_9sFsFsFsFsFsFsFsFsFsFsFsFsFsHsrtNsFsFsFsFsrsF1vsopipipipipipipj_9_92VsFsEyCyCpj_9_bspsFsFsFLFblLFkEpj_bspsFsFtNsHkFsFtz1x1NsFsFsF-5_b1x_Z_9_9_b2V_dsFsF1N_9_9_9sFsFsF_9_9sFsF_9_9_93bsFsFsFsFsFsFsFsFsFsFsp1PsFsFsFsFsFsFsFsFsFsHsFsFsFsFsopipipipipipipj_9_923sFsEyCyCpj_9_ZsHsFsFsFKlblTFsEpj_bspsFsFsrsHkFsFuVtP1PsHsFsF-5_Z1x_b_9_9_b2T_bsFsF1N_9_9_9sFsFsF_9_9sFsF_9_9_9_dsFsFsFsFsFsFsFsFsFsFsp1NsFsFsFsFsFsFsFsFsFsHsFsFsFsFsGpipipipipipipipipipipipjsFsFsFsFClCjTFClKlsFsFsFsFsFbljlsFsFsFsFsFsFsFsFsFsF2V1vspsFsFsFsFsFsFsFsFsFsFsFsFsFsFsFsFsFsF1xsFsFsFsFsFsFsFsFsFsFsFsFsp-5sFsFsFsFsFsFsFsFsFsFsFsF1N_9_9_9sFsFsFsFsFsFsFsFsFsFsFsFsFsHsrsrsFsFsFsFtLsF1vsoAG1xu2xbIKIop3_DjBDI527THNKeoudvuZinDHCVRGxpy-cdxjS10H-e6r6mRCyqpjVSPjPkB9KKGuMDoohaD_eAZA6LtF-avwTkDf3_7QA3ubL2_MkDSfWz997RFnCql0QpDOvTEoz2dH3HaH1_fi4PyF65YN1VPh7UALu72u4P2jaeB5Yxsd-Jz6wOA7TjioIHIkdchd7ySlY3l8M2pmqq-E5l1eLeH68XDpP1ayi6cr-ZQydmkGx2AO`
+
+- `SheenChair_016B_ellip.glb` (10 bytes, 14 chars, method `ellip`, picked by auto, score 0.429)
+
+  `YAMETt98bQXEAA`
+
+- `SheenChair_032B_ellip.glb` (32 bytes, 43 chars, method `ellip`, picked by auto, score 0.548)
+
+  `YAiLkU8aYCHELnIp41ODuIWYIRrjcIkQTwQjXDDhIgA`
+
+- `SheenChair_064B_mesh.glb` (64 bytes, 86 chars, method `mesh`, picked by auto, score 0.588)
+
+  `gP9bAwFBVsEEDYCZECI_LEP4tMEN1d2EDUzEEckjEEcYiZEBfxaEBrlLEPPyKEOK07EPfhcbJn4dg9jwdPlZwA`
+
+- `SheenChair_064B_voxs.glb` (59 bytes, 79 chars, method `voxs`, score 0.520)
+
+  `UP9bCiByhO4g4hIg4iwhIhQhQgBT8Z84vfkUnQC9SpPfpWCadaUR1qdAg3DvMaNeMpuSBPE8Gy-_lB4`
+
+- `SheenChair_064B_vox.glb` (59 bytes, 79 chars, method `vox`, score 0.456)
+
+  `QP9bCiByhO4g4hIg4iwhIhQhQgBT8Z84vfkUnQC9SpPfpWCadaUR1qdAg3DvMaNeMpuSBPE8Gy-_lB4`
+
+- `SheenChair_064B_sh.glb` (59 bytes, 79 chars, method `sh`, score 0.505)
+
+  `Jf9bISYcu8iL-2djcX6dmLsOuOCHp1Gz8YbiGXQi6jlMglx4qOozHe0gwY1hVkWCmlqxaK2Y4yfFupo`
+
+- `SheenChair_128B_mesh.glb` (128 bytes, 171 chars, method `mesh`, picked by auto, score 0.697)
+
+  `gP9bBgKgG8KEBIkMECI_MAHIEpEUGyJEL3SKEMk0TETUiTED6BmEBakrEBfxaECNVMEOPj8AOK08EO_Q4EMJx2ECVbzEEFFkEdlcDEKWf4EOpN8AO4kcEMkyCEP276EPb7a902yvtkyJWkA4YgUCHuNZDwXg_C-PCjLWS09TV1g`
+
+- `SheenChair_256B_mesh.glb` (253 bytes, 338 chars, method `mesh`, picked by auto, score 0.752)
+
+  `gP9bC4WwmVZEBIkMAAG9aEApM8AE49sAHIEpIT3ioEDUTkEB19DEDYP8ELo-sEO4kcAL3SJEEVimEEaxEEDShSEDZyWEBqS6EBPysACNVMAOPj8AO_xsAC-wJEEbE8AK7UsAOak8EOegoELqxUEMZymEM1SEEPWVJEP3dcEPJNcAMXP6EGV_mEDV70EdF8jENVLTESlLCEBgtSEEFFjIc1FkEeV9EEOQNSEMUTzEMghyEPbbYPC8PJ4vsb3541jsZ7bI50hZPU9lfLeO0PL7GztbeZZzMy_bCvCfCP7YRwcQm8l9sk1Ui0OfkBRDw2GXOyzUygpPHSo8pKj54A`
+
+- `SheenChair_256B_voxs.glb` (247 bytes, 330 chars, method `voxs`, score 0.678)
+
+  `UP9bG10zmQQgQgwg4hAhAhYgQhAg5FAhAhYgQhAg5FAhAhYgQgQgwg4hAhAhYgAT_bD6GIWdDkjdSLFf1Mf59OxrRIWFeGfuKepcPpQ-vXHtMoSEs36tB71HsdvcgZs2OpmXhEF97RCJvHqFJfZEyu-Vdr90s7R2EFryhggEqPcBBTxq-Vw-ZxfqrV9aS8p1_6zYV17WC4udvaD_Weaa9WoqVkn3dn7GbfAWYcWO6XpafUvZNUjWgK1tgxIA2_UP5sZ06OEklH3sX126u2QbRiaeBNZ1mgpWz29BRbP-V6X1sWjNS0gAmf6mvtt1t2Z5HQ-S1FHiMQ`
+
+- `SheenChair_256B_vox.glb` (247 bytes, 330 chars, method `vox`, score 0.606)
+
+  `QP9bG10zmQQgQgwg4hAhAhYgQhAg5FAhAhYgQhAg5FAhAhYgQgQgwg4hAhAhYgAT_bD6GIWdDkjdSLFf1Mf59OxrRIWFeGfuKepcPpQ-vXHtMoSEs36tB71HsdvcgZs2OpmXhEF97RCJvHqFJfZEyu-Vdr90s7R2EFryhggEqPcBBTxq-Vw-ZxfqrV9aS8p1_6zYV17WC4udvaD_Weaa9WoqVkn3dn7GbfAWYcWO6XpafUvZNUjWgK1tgxIA2_UP5sZ06OEklH3sX126u2QbRiaeBNZ1mgpWz29BRbP-V6X1sWjNS0gAmf6mvtt1t2Z5HQ-S1FHiMQ`
+
+- `SheenChair_256B_sh.glb` (256 bytes, 342 chars, method `sh`, score 0.694)
+
+  `Kf9bISYcu8iL-2djcX6dmLsOuOCHp1Gz8YbiGXQi6jlMglx4qxCz7wqqDHVdV0GOpFrq0dF9HKi2zrQm6UIMhFyYTdJ0IwlCjqwoxqoUbCEoNrCjoOnCLprfN8nMhN8nwi6Tqxk6Loya5yoSa6DoNq6kJwi6bqwgtqYtcyEXzdKEIwk6cJOlCLpsjVsYSc50IReyjpunCLpva5boyamC4Lct0HRhGBkvVEYUCLmUE8Ew01RatTW8ZFKqM0NULEtltL1Cq7RMVM1FNbZLW1NLJcTCtTZDM9NLQ15w2zXk7XW0xXHU46pXG0y3G3HWQ5t1MRkstx4tMxpmItNx1tNtMg`
+
+- `SheenChair_512B_ellip.glb` (511 bytes, 682 chars, method `ellip`, picked by auto, score 0.815)
+
+  `YIqe5iXSII6EBmlkPlok0IYpHJTbd_IQ8cfVCIsLIhJuWZtShaRDx69D4WRGCDrFCWO0LDIaXkytsWKYABORHfQZ7kQduULG8EPgBxegh9DoWhB-Gsjq4tWACyyiWRaUUEGuD0NoIW4AHt5lZWFasQpgfJGrQtgBsxSp0hoMhC2Gwj7RlmACMDpIyM3cADn1SvmWJ4ALMPjjT94Qy4OuSqoJoQhgxSl8HCQhCVnAj6lmRiAsDZnxIYsAB4pCvlimYAMP6FZcUZwAJZsWxokKQhleqeVIWXABiGYkZUe-AFLDo5TkGzIoFlUriINmIDnXJTQ6UIQLYeW6GS0Igjacds4dkxBCGwsJqcmACbFCFzghyEG20StvA8YASbpGfUUawAJ2OXCNsxIgTYkyEzZuxCqHIrbZlmABqyymPIZzEG7TCSpDcIIYtJKZVJ2QQOPOQmsiCQhOxOR0XBQzKpdRDotKKiGFB6mxNwkEPXJ0PiS6SIFMTLbDJMIQ0byO6BRJIg-w-R8v3hUQaK475NEeAHDaqXxZU6ELcDCSsQFGIHuHpXQ53IQioSK3JhHghpwimEotPADOBksaGEeAGjDi2yYNyEKnNCtmULWIH0nqW-LcMQjYpSuMK4QhxFMWVGQbAANy474lXciCzN5IUT0jEHX2yRoty4AG5qHnMvSwAA`
+
+- `SheenChair_1024B_ellip.glb` (939 bytes, 1252 chars, method `ellip`, picked by auto, score 0.848)
+
+  `YP5_CRXS1G8ABmlzOjmlwIYrJIXIeJIQ-ehIyTEPgA_kWSEottBD52wzXiu2CDrFCWN1KiIanEiMoSDYABNvkZEd7wQaoTKyhYpgBzoeZsEWbBBiGskILcuADKyqVu1GjEG-TStn4R4ALN6FbMkVsQhfaI2Y8fgBqvKhkRpchCqHIr5RYeAB0MA3QkGsAEn1iveUg4ALrtjhFTTQz4MuSmaN0QhixQhbYIchCRm4b5RlhCAkDRWRIZMACYpiMlEe4AOwZlbIMbwAIVtUt5zsQhhYqV0oYrABWCQjYYtWAFK7Y2yweTMnllUsbqNmIDkXnS06FIQMXbSuArQIgdccdsockhA2KwjpZJmAB7EI3zHcCEF20TOjA8YAY8GEZOFJwQO4NM6JYrYgVWqdsIXvACCG0jISjOACayqWO2GTEG6TiskMNwIaMpmbGGUsQNMOQiT0qQhYxQdTRwchCVZRLHw2yiF9RyltMLTEO25yOj8zKICtSEdTF5MQzczK110XYg-xCRsGQdVQmDIrJw02AHb7BmwHqsAKbzBxlHuEIHLHoY9F4IQmoPIyeY3ghlyiVlGzLAC-BcjoMi-AGa7aWPIhyEMWbRunEWEIH0IKW8d_YQmYoQtg4OQhvFgV0hC3AAdu4rIYtaCDLNw4RV5REGn2SPiO4YAF5KlfGG5wAmYjG6Mg0qpM3oZr4TexAGCUrYkOuAGML5HT9NMANslSOknmYAUwMkfFkHwAGxQQ6KkzQgRDERj8j3AAqpAzX7lsiBy6qmNViTEOLEkPgcy2IKQ4lc-LUwAivUI-cDtgAC7aZjxprBAOKwrXkQOACmhZHyIGUENYFithIMYAT0qEZKFqwAPgOUqPliQh5FMRk8ojAApvEjXZW8CF2ihIRYYcAEGKDrgODkIYOnKVGS-EQTuVK-IotgArYaRsSiwxCxvQzXRE1iE8ERWRaFcAMGHxvphEEIWLqHc_vYUQdgkG6LItgBy5gZz7YyRDhmAjoukhiEfCJWzEGsAI12hvg0LIZbL2KY853IQzyMHGUV0YhtFKR8_mfABFm8j4_vBiDOiZIRhucABzrkpf7REISw0kdJsVwALdTK2XIvgAVCyR0sVvAApilKnSkxCGRhyEUizSEImKELbsVEIlLxoXAV4IQUgdIuCmngBfDSR0pgnADGZBbIOqrCHLLJGxbJWEB9z0MeMyYILMUIU6GJIQm3LK2BIpgg-4kZrxxPABhiMbYSDaokDehmPiN5EA`
+
+- `DamagedHelmet_016B_ellip.glb` (10 bytes, 14 chars, method `ellip`, picked by auto, score 0.585)
+
+  `YAMET-t8-pWZgA`
+
+- `DamagedHelmet_032B_sh.glb` (31 bytes, 42 chars, method `sh`, picked by auto, score 0.619)
+
+  `I_Of3yezsNdcepbGTDygVrtAVD8b6qicGz18XAw5AA`
+
+- `DamagedHelmet_064B_sh.glb` (59 bytes, 79 chars, method `sh`, picked by auto, score 0.662)
+
+  `JfOf3yezsNdcepbGTDygVrjwrF74qVFjksdN04Qm-UKUg2EWzdoCofjfVUTg2Zoq2aGevi3S5Aw5NVk`
+
+- `DamagedHelmet_064B_voxs.glb` (51 bytes, 68 chars, method `voxs`, score 0.569)
+
+  `UPOfxxhyA-iIzNMy8QiIzNMy8QBTsQAkB9vvuK9CS87zwFyy8vBNyS2vmurum1SRwbay`
+
+- `DamagedHelmet_064B_vox.glb` (51 bytes, 68 chars, method `vox`, score 0.509)
+
+  `QPOfxxhyA-iIzNMy8QiIzNMy8QBTsQAkB9vvuK9CS87zwFyy8vBNyS2vmurum1SRwbay`
+
+- `DamagedHelmet_064B_mesh.glb` (63 bytes, 84 chars, method `mesh`, score 0.548)
+
+  `gPOfwwFDSHGZQ4EYiCuKXiE4g3d2FWCIpUnkRMxYHd3zP2ZvM4YiOE0lVbHSVVY_BJmfbB7YvmuWyPCx6omU`
+
+- `DamagedHelmet_128B_sh.glb` (128 bytes, 171 chars, method `sh`, picked by auto, score 0.696)
+
+  `J_Of3yezsNdcepbGTDygVrjwrF74qVFjksdN04Qm-UKUg2EWzm6MWOYuDGzglzlwm5z3RdSC2yjBsYOXB0Ixg10oOe-EIvnCcJwnFzXSex02ydoCofjfVUTg2Zoq2aGZlZaZ4NnSJa5hnmEevi1S4XU42mjE1Aw5NVmuRpuuNxw`
+
+- `DamagedHelmet_256B_sh.glb` (256 bytes, 342 chars, method `sh`, picked by auto, score 0.720)
+
+  `KfOf3yezsNdcepbGTDygVrjwrF74qVFjksdN04Qm-UKUg2EWzm6MWOYuDGzglzlwm5z3RdSC2yjBsYOXB0Ixg10oOe-EIvnCcJwnFzXSex02yi2Tlwg5rmsc2C2vit7GthCEZtZCTnyhB0osbN8YNZCDWtVGL2QgyDIMdGK3LayMWtVFsZuhB7mxdN0oObSFJNdKTmSm6LmQa6LpQg2DYMgtzG1hBrtAVD8b6qicGzNFWzQzMrLTPBs6RLXMM8wiwsJCHEQsLDTFNLRDU1vcUsRCQsS0JDMrTD18WqXC6nG00Ymo44mm245FGnHIGHJqs1yNN1xuONxpSONxpxRtOA`
+
+- `DamagedHelmet_256B_voxs.glb` (244 bytes, 326 chars, method `voxs`, score 0.689)
+
+  `UPOf0D0SleIiiJEQ7u7u7vMzEzEyIiiIqqzMiIREiozvd2zMzuzurMzuIiiIzMzMqqiI7uztVVEQ8QruzMzvM1MzNVd2KAKCBRQ2mAgHNSvdwWUideD5POKAjE-KiHAf86X4O3LJfZhul4wsexK9D1yquU-Hu4GoVKQFfYMD2Ed3xuXWrTLwsg5HXdGn34rSIn_853QSRFoFF0LdRLYI0-up_vsCUP9lhMDGLPMidpe3S4_Ka2Tn1PB0FJHmJGi1LgqT-HBBu4I2la3-Foh3XyfHafET0XFv2W3c3x1uKNB7mqVAMb3CS_i9lodT7L4DYcAxeA`
+
+- `DamagedHelmet_256B_vox.glb` (244 bytes, 326 chars, method `vox`, score 0.640)
+
+  `QPOf0D0SleIiiJEQ7u7u7vMzEzEyIiiIqqzMiIREiozvd2zMzuzurMzuIiiIzMzMqqiI7uztVVEQ8QruzMzvM1MzNVd2KAKCBRQ2mAgHNSvdwWUideD5POKAjE-KiHAf86X4O3LJfZhul4wsexK9D1yquU-Hu4GoVKQFfYMD2Ed3xuXWrTLwsg5HXdGn34rSIn_853QSRFoFF0LdRLYI0-up_vsCUP9lhMDGLPMidpe3S4_Ka2Tn1PB0FJHmJGi1LgqT-HBBu4I2la3-Foh3XyfHafET0XFv2W3c3x1uKNB7mqVAMb3CS_i9lodT7L4DYcAxeA`
+
+- `DamagedHelmet_256B_mesh.glb` (251 bytes, 335 chars, method `mesh`, score 0.705)
+
+  `gPOfy4WzDGlVSXDGZgIE5mSKTpmVXzTM2GmiImEYTMyjCxETglREVx3FVIC5URKQ4JiFRKWZiy6IiB4n4iBMJZmW4vmdz8b3eHf4md8cL3eNOF4iIfy3iEsxKq3IQYiF2iREWTumZnQ_YdZkOmZtC6YiOrJImd7EJmZ8wau7YCHd_3UJmdUlmZqx2zM7CaWZpUHyImkkBEZ2WhEZ0DxEaGyhEcUxxEZA9lVczEREcQkxEfbYPbc8a22B4WP7bboW2P8H7CY5CbGWyGn7Keyutr_PXO3OXwuFXDXC2yXTyLQ6DCwTMReQeT2U6dGGs3nNJi8YR0silRHWaIA`
+
+- `DamagedHelmet_512B_ellip.glb` (511 bytes, 682 chars, method `ellip`, picked by auto, score 0.760)
+
+  `YIt6hLG1lThEa8R0QlGtTVWHVrhOXpVV3pfTGgTxMyVWymM04mZld1lkqNKQiNsuRYUTqmd159SwpHcq7qubFhWN4VmxqNPGQ1RMzOikt1dV0RHOik8ZaoURGjbx5UDd4iKB5GQmryzMGyVnlRyVZ3k4jLGmLMzvFFyaM4cpneavMkZ5IjO7G8hZT9c2d10EVOq6yiI2LZFlVpbZmOLVXCiTqIivIKeNNTmZlhPU0KM0asrmNxJU-lGdzIzmRnA8REQRGHpYwyIiT1NLGZSJVVihI6EiXaIiNbk0JWaas3UCbpzOh5mRI1VSkLLVVHIlMbQxWERQQhdCUa4zNiWo2VE3oRFe4REZ9FFVcBXjIRMLYdWibWwjpbqq36wHjLJ2d3ndXfGWLSRE50qeU_opWZA6tbpyVERKOFZ4Tl2ImWDNlvlIsO7nL2HjNN1eHmoDRKkVXV02hMyNBS0iJZs9j6MwxEJLabYzyO2Zqj4HPp2sGZvjasfIcHVVufOZCsUEiJdhUeUtDuJmc3Zr4rNbuzREjY0NM4h6OVDwmtzKq62LphIKJiZycqRGYTM7u-s6x8zCMzM5Rhr5znqIkG5BpTjKLzCa40RmVDTM4ZoGjImrqqvXYPGxCWREdcamE2WqJlY55cJt0hEUhVjYSMh1VS3IDzoHEREIatnlQpid3A`
+
+- `DamagedHelmet_1024B_ellip.glb` (939 bytes, 1252 chars, method `ellip`, picked by auto, score 0.797)
+
+  `YP-KRLGSiuhEbriTugm6TMzF6HdEdvVV3qhO-JsPM0Xaql0m2mZlZtdroDFaIl0-BYTWm2d17MSurFbs8Mt8ldCN4Z30tSO2A9PERMkktk9FsRHWmk7Y12Tu-rzqHwBd4iJiIWueI2xEFzUnbOOcd3i4lJGWKQzvHLwWEthlneavMkI6lLO6-0xIT9c2d10UVLm6qiIzn6qa_hKZmRIUU6fjqIirGOd8c1SIddPUsJFZCqjmVxIyix2dzpjEvipNzVQQjnfMsiMzT2ROybZPERgdIx8h5WIh9Tk7Yjg7M3UDCISbaqqRZlEwiNB1VGtonbKW7RFPQfa-Agu7vmeixkiGARFW4U8IrvlVTxPjHwUY4dXC8SwnJzCI1bvlfOY8VmnbUY2WbOZm50keEnCNVU46lLprKszSGU53RXJYiFTc1Ng3KREJoRre8ssMzolEM-LDFNSwhQt0mlEiJGBA7ZkyREQr7CIT0rJmY1nluhKEEROjara-N7ZmshMS6KvKZpbnOd8kdaJmQzo742tTsrY8CGwYg4h6eFTOmnqqq7VMofB-GiIxfsKyKVU7s-26N1RwcAA1ZdD5SbCqsfBRYyL3KuyboTOmPCzVWamldLOoq7sZaO-ha2ICdgch8RlWIhg6FbIy25mUY2i3PJdWZimXDQkbEO8K7ulfIxjVmTMbW6EdYREfTcZ802VnestxTZjGRETECpH0W-BAXFXFslMDmZ3KXlfJGbd3JpbK2TLzEzquul0TEV3dZo5jZMuwiLGpJYysq7u9E30QkZD1VX22oa9e8mZQdwJGTMKzKxJuSEo7tnc7RokJkucTNC-xHyKN1VWB42NgwqREXEpLXKVsERzalK6IzvESisQtsDjgRGw3FTXttdVUF4RYzbLLzKkImNlFBGZnHqrbFijERrZKYyOi4IjUPOt0MnmphwixT4Fxbu5UcRYTBaZmZX2TPnmWiIv9tkhEVOZ3xcRQ6id0Zpcg0t0RlIzMZ49EJaIczOkEyGQWeIiLHtCvlwkqzcuoIhGTKmZyVpK-IbtEyatQV8h4mJmi8RDo53lXao9C2RaNZmMcDUMcXVTM8TIohKJdmZwmMM-AtvNVPlYR89SxneQqtroHSqqsBMrXQEbGZs8oSvpOdzMluzmdAKJiIjb7LCC7gzvFCiSFY9QACw6pL4xWyIkiMyYSU5REc8ViumVNVVOSBFhG6Tu7ZM3WyGN47skhcd8gYtmZhWBLpx5AABh5i2RITREQ`
+
+- `Lantern_016B_dct.glb` (15 bytes, 20 chars, method `dct`, picked by auto, score 0.592)
+
+  `MZvy-32OpO4vx0uHgRgA`
+
+- `Lantern_032B_ellip.glb` (32 bytes, 43 chars, method `ellip`, picked by auto, score 0.771)
+
+  `YAlmMC42TMlVFnYGNye7w6rDQQjJB4VVY2gZKkEy7KA`
+
+- `Lantern_064B_ellip.glb` (61 bytes, 82 chars, method `ellip`, picked by auto, score 0.843)
+
+  `YBF1cDGyD3SM1oIGNoBDy7LEQPhHB3VVXvga-ZY2yoslA50wIeHVTmBsJlDTss20C2Ygd3ZVgoGylg7qqg`
+
+- `Lantern_064B_voxs.glb` (62 bytes, 83 chars, method `voxs`, score 0.816)
+
+  `UJvyzlwyA6qq7LLtDsyo7Kqq7LLtDsyo7LDLDqRoZmyoMtHmGYBw7p72iARbJ9sxTplwscOY_jzW2BwHxpo`
+
+- `Lantern_064B_vox.glb` (62 bytes, 83 chars, method `vox`, score 0.765)
+
+  `QJvyzlwyA6qq7LLtDsyo7Kqq7LLtDsyo7LDLDqRoZmyoMtHmGYBw7p72iARbJ9sxTplwscOY_jzW2BwHxpo`
+
+- `Lantern_064B_sh.glb` (59 bytes, 79 chars, method `sh`, score 0.712)
+
+  `JZvyzNeWsVP22hiEsdt2wTIIlWVmzpBTRxPA0N1ch1mHbVlIpZjSOOaecVludSZi4lyjAHq7JAUK12U`
+
+- `Lantern_064B_mesh.glb` (58 bytes, 78 chars, method `mesh`, score 0.728)
+
+  `gJvywsEWwHFVSTGmZRgJFVVjc3ZVjTHZTZ0IZTaMGZTOkWZU-53ZZ9IXZe9n0RPcXG2PHX3NaMksgA`
+
+- `Lantern_128B_voxs.glb` (126 bytes, 168 chars, method `voxs`, picked by auto, score 0.882)
+
+  `UJvy3LyECwqqqq7LLtLsyo7KqqqI7LLtDqyo7KRoaJDqRoZmyoAGY8ZW5l6by-WR9B7-kU83NdnxcsgNgh2dndVOKka_TRrzq4knYNOWvt6SeIa7dcDoWwiDLVpJ20bQ0omb5e03Kqk-KDJbQdww0GeqAZBtQMCgZtSq5vN_`
+
+- `Lantern_256B_voxs.glb` (213 bytes, 284 chars, method `voxs`, picked by auto, score 0.887)
+
+  `UJvy3LyCCwqqqIiJDrDqqqqqqqyqyqyqyrDtDtDrLtLtLtLtLtLtDsqoyqyoqoqoqpDtDsqqqqqIqqqqyqyrLtLtDrLtLtDrLtDtDrDqyoqoyoyoyoypDrDrDrDrDq7K7LDrDqZoRoZmRnDK7KRoRoRmRmZmiIqoqo7LDKAGY8ZW5l6by-WR9B7-kU83NdnxcsgNgh2dndVOKka_TRrzq4knYNOWvt6SeIa7dcDoWwiDLVpJ20bQ0omb5e03Kqk-KDJbQdww0GeqAZBtQMCgZtSq5vN_`
+
+- `Lantern_256B_vox.glb` (213 bytes, 284 chars, method `vox`, score 0.856)
+
+  `QJvy3LyCCwqqqIiJDrDqqqqqqqyqyqyqyrDtDtDrLtLtLtLtLtLtDsqoyqyoqoqoqpDtDsqqqqqIqqqqyqyrLtLtDrLtLtDrLtDtDrDqyoqoyoyoyoypDrDrDrDrDq7K7LDrDqZoRoZmRnDK7KRoRoRmRmZmiIqoqo7LDKAGY8ZW5l6by-WR9B7-kU83NdnxcsgNgh2dndVOKka_TRrzq4knYNOWvt6SeIa7dcDoWwiDLVpJ20bQ0omb5e03Kqk-KDJbQdww0GeqAZBtQMCgZtSq5vN_`
+
+- `Lantern_256B_sh.glb` (256 bytes, 342 chars, method `sh`, score 0.773)
+
+  `KZvyzNeWsVP22hiEsdt2wTIIlWVmzpBTRxPA0N1ch1mHbVlIpVCrlxqyrqvo5in0gxqIWjWCYzgqrlOm6zXRVFzpQQ-inRdSMo0cp0XQg1rnpi-kGwW5kJQjGUVwi6bYOg2CnSdJ0Xrgt6nxfKEYUtBToubF0Xwe1rYte6LmQg6KoNfODXrgyDIzhOEoyg1zXSjBTaOXCDpNY5jlRXFzlwc-UIwW5jMaRyTMXcStRaQ8q1wkwsMtMjGky0ubMytLK0rEtLJLRDNMW80yyqLDQ0MzQrKsKs00xEWy8pHa4o6m23YZE07EknHGmWmoAhVKTWOWqROomRVuKWFRSMooyA`
+
+- `Lantern_256B_mesh.glb` (253 bytes, 338 chars, method `mesh`, score 0.851)
+
+  `gJvyy8VgNk4dS9rmVANrYdS9kWVBgP1VRwAFVSCt2VSCB2VmgAFVWwP1VVyeFVVi8mVSzMGZSzDmZVizGVVyCGVS4EZdjIL5dlV8JdlIbZdi7L1VDK0mZVIEJdlVz5di_8IdlP8JdlPz4djPz4dVLEWVFLLmVFeFGVIM1IZX8q4dVeK2VLda4drtVIdduVVVP9lHZd830RP9rHZdeKmVN5EyM8rLyNN5LSNO7MCM-7UCM8rECNOMPbYnje2P7I1STZly7bIexvjsuPyioakDdS2wer5bycvpRZptz2x3xmKRMaPIcyQ0Efuetsi-lklkWhz2ke6myaVeU63TAA`
+
+- `Lantern_512B_voxs.glb` (298 bytes, 398 chars, method `voxs`, picked by auto, score 0.894)
+
+  `UJvy3LyBixDrDqqqqKqqqqzMzMyqqqqq7K7K7LDrDrDq7LDtDtDrDrMNLtMNMNDrLtDLDqiIiIiIiIiIiIyozLLtLtDqqqiIiIzMyqqqqq7K7LLtLtLtMNLtMNMNDtLtLtLtLtDtDqiIiIiIyoiIiIyoiIiIyoiJMNDrMMqqqqqqyqzMqqqqqqqq7LDKypDLLs7LMNMNDLLtDq7LMNDtDqqqqoiIiI7KiIyoypLs7LDq7LDrDtDqZmSIZmZmZm7LDqZmSKZmZmZmZmqoqIZm7K7KBmPGVuZem8vlkfQe_pFPNzXZ8XLIDYIdnZ3VTipGv00a86uJJ2DTlr7ekniGu3XA6FsIgy1aSdtG0NKJm-XtNyqpPigyW0HcMNBnqgGQbUDAoGbUqubzfw`
+
+- `Lantern_1024B_voxs.glb` (561 bytes, 748 chars, method `voxs`, picked by auto, score 0.897)
+
+  `UJvy3LyBCxDrDrDrDqqqqqiIqqiJDrDrDrDsqqqqiIqqqqqqzMqqqqzMqqzMzMzMqqqqqqqqyqyqyq7LDq7LDrDrDrDrDrDtDLLtDtDrDtMNDtLtMNMNMNLtLtLtDLDrDtDtDqiIiIiIiIiIiIiIiIiIyoyoyoypLtLtDqqIqqiIiIiIqqqqzMysqqqqqqyoyq7LDrLtLtMNMNLtMNLtMNMNLtLtLtLtLtLtLtMNLtDrLszK7MiIqoiIqoqoiI7KyqqoiIqoyoiJDq7LMNLtMMqqqqiIiIqIqqqqyqqqqqqqqqyoyoqq7LDqypDrLtDrLtMNLtLtMNLtDrDrLtLtDrDtMNDrDrLtLtMNLtDrMNDrDrDrDqyoqoiIqoqoiIqoyoiIzKyoqIqoiIqoqoiI7K7LLtLtLtLsqqqqqqqqqqyqyqzMzMzMzMzMqqqqqqqqqqzMzMqqqrMNDrLtDrDK7JDq7LDK7LMNDtDrDrDq7LLtDrDrDtDK7LLtDq7LDK7LDrLtDtDtDrDrDrDLDtDqZmZmSISKZmRoZmZmZmZm7K7K7LDKZmRmSKSKRoSKZmZmZmZmZnEQqIqIqIqIZmZmRoSKRmRoZmZmZmREZmyozKzKyo7K7K7LDKAGY8ZW5l6by-WR9B7-kU83NdnxcsgNgh2dndVOKka_TRrzq4knYNOWvt6SeIa7dcDoWwiDLVpJ20bQ0omb5e03Kqk-KDJbQdww0GeqAZBtQMCgZtSq5vN_`
+
+- `CesiumMilkTruck_016B_dct.glb` (15 bytes, 20 chars, method `dct`, picked by auto, score 0.531)
+
+  `MZIf2k5Hb27vm9JZQPgA`
+
+- `CesiumMilkTruck_032B_dct.glb` (31 bytes, 42 chars, method `dct`, picked by auto, score 0.563)
+
+  `M5If6k5Hb27vm8Su9G7mZCtPbPMdthBO0wb1VpA6iA`
+
+- `CesiumMilkTruck_064B_sh.glb` (59 bytes, 79 chars, method `sh`, picked by auto, score 0.665)
+
+  `JZIf3ya_nMtMM5gezt1jNjpNwB0oBk6jrTlNspNY6j2MhVyHVnpAojVfti6emjIumyGe3pEY7BYhtx0`
+
+- `CesiumMilkTruck_064B_voxs.glb` (60 bytes, 80 chars, method `voxs`, score 0.630)
+
+  `UJIfzTF2hhEy7uREE3IP-6SG6Co_VoOyjiI9EYI9lbB2sF6Dl9KFM5vO56iBNKYmMIBq18kyxWJPoY-e`
+
+- `CesiumMilkTruck_064B_vox.glb` (60 bytes, 80 chars, method `vox`, score 0.604)
+
+  `QJIfzTF2hhEy7uREE3IP-6SG6Co_VoOyjiI9EYI9lbB2sF6Dl9KFM5vO56iBNKYmMIBq18kyxWJPoY-e`
+
+- `CesiumMilkTruck_064B_mesh.glb` (63 bytes, 84 chars, method `mesh`, score 0.660)
+
+  `gJIfwwFCyMGZiCDmZiEf5mRucZmh_wc3RigIiOiQImOvwc3ev8Jmulv5meCMWZuBzmZvbbpbkhwrcUCDZGbC`
+
+- `CesiumMilkTruck_128B_sh.glb` (128 bytes, 171 chars, method `sh`, picked by auto, score 0.742)
+
+  `J5If3ya_nMtMM5gezt1jNjpNwB0oBk6jrTlNspNY6j2MhVyHVXBTpwUxzXwg6MGwU6cGWguFXUdZr4vi6MFLa2MGyg5sHQi6cIunGDXzgt9IKnpAojVfti6emjIulyG1rbOm22FpzZGXIxke3pEY7XYpEWE2rBYhtx2upmIs6RY`
+
+- `CesiumMilkTruck_256B_sh.glb` (256 bytes, 342 chars, method `sh`, picked by auto, score 0.789)
+
+  `KZIf3ya_nMtMM5gezt1jNjpNwB0oBk6jrTlNspNY6j2MhVyHVXBTpwUxzXwg6MGwU6cGWguFXUdZr4vi6MFLa2MGyg5sHQi6cIunGDXzgt9IKk-cGOnBjpyhF7XQg5sXOi6cGupBjmQdNzYOfJyXri9bpQe6UIupSEnRg10XMg2LoQY-TmQW50JMc6D3Tg50INdJjnQi5rpwi6T2MfB83zdKDHQg189IFEar9sXT00ZF0uQ2tbZ022wtObIy5GMiPcKxPFvTY0OyPEPbG0xUSbMyMsEsVEtD1D29IjHa7FIiwm1bJMUWVFKlZXHYLkNuO11MxFmyKuJwKQqKRqxKSg`
+
+- `CesiumMilkTruck_256B_voxs.glb` (245 bytes, 327 chars, method `voxs`, score 0.770)
+
+  `UJIf22b1FizMqrVUiIzNm7FPeW7vu73_WZebMyqqZmiIiIzM9QJFu7vdFNF7VU7uzNVUqqzNvbFPV28R3d__ebeZMyAAPoE91QL9bozezHJZ1iro-37SzdFinSYCcqaOPnEg6kjicBf63f6Nbpu8EB2RBNaAFH9E-G74XEhh-Z1sHHJvyH0QqfHIqr4za9VPqMoqzhUH3yXC9uuzzlv0bbBk-TaxvlQiws1XFeErveLvcEiLMnxde2c0SpRFqmr4XK5JvHV_YQuAfpKwbq07J_UbNsmUPQVUfMeBth3N1sBoauv4nRx5XD-fEipAhd_yMzvsJ7Y`
+
+- `CesiumMilkTruck_256B_vox.glb` (245 bytes, 327 chars, method `vox`, score 0.767)
+
+  `QJIf22b1FizMqrVUiIzNm7FPeW7vu73_WZebMyqqZmiIiIzM9QJFu7vdFNF7VU7uzNVUqqzNvbFPV28R3d__ebeZMyAAPoE91QL9bozezHJZ1iro-37SzdFinSYCcqaOPnEg6kjicBf63f6Nbpu8EB2RBNaAFH9E-G74XEhh-Z1sHHJvyH0QqfHIqr4za9VPqMoqzhUH3yXC9uuzzlv0bbBk-TaxvlQiws1XFeErveLvcEiLMnxde2c0SpRFqmr4XK5JvHV_YQuAfpKwbq07J_UbNsmUPQVUfMeBth3N1sBoauv4nRx5XD-fEipAhd_yMzvsJ7Y`
+
+- `CesiumMilkTruck_256B_mesh.glb` (252 bytes, 336 chars, method `mesh`, score 0.743)
+
+  `gJIfy8XRieoiBk_5mRSf3d-k_5meofu7h4fu3RwMyIkCuVVcCt0ROif2ZuS-Xd-6tYiBKdZmRqb5mRylpqRya6qjwsyIkC8zM8A8jM8gMSIh9cyIuv8Luxv8d3hxCkRDADiIkSkTM8irUREirUROSq8zOAriIuTIqquv4Zux_wc3RkAbuhSAIiESylVTwzjM8CkkROiVJqOiSKqujwLuuvwd7uiAHd8CikRMQjTM9gESIkGcYiPbbB7C8PxPF9tjeH8RoWxUSNmRdsbne22P0NLak_Yrci9X2xbL-2MeM-NeOZ7P-2QaiQ6LyP2SaXybT6yVyqUDZAj4PG9c`
+
+- `CesiumMilkTruck_512B_vox.glb` (506 bytes, 675 chars, method `vox`, picked by auto, score 0.830)
+
+  `QJIf22byli7uZmZnVVd3My7uZmqqzNmZEQzN3d__3dd2qrMzER__u40HEr3d3d3du7__3d__e9NzN7m2zMzMiJ3d__3fF7F73_My7uzN______u7vb_____-zMZmZmiIiIiIiIZmZmqrEQZmREZmZmZmZm7vNwZn__VVV2Ij3dvciJ____m28rN7e9___-zMZmZmiIiIiIiIiIiIqqzM7vFN__mZF6RFu7N6iJ____NPFRF7F7___-zMZmZmiIiIiIiIiIiIqq7uZmZmZmZmZm7u0H__mZN2Ij3dWaaH____NwsFOZF7___-7uZmZnEQ7u7uzMZmiIqrd2zMqru7__3dEQiIzM7v3dva8q0H3b3d3dVV__u7u9m5N7Nze8iqzsiJ3d__3_N7F73ezNEQiJ____3deXOb3d____EREQ7vEQIiREIiIiAAPoE91QL9bozezHJZ1iro-37SzdFinSYCcqaOPnEg6kjicBf63f6Nbpu8EB2RBNaAFH9E-G74XEhh-Z1sHHJvyH0QqfHIqr4za9VPqMoqzhUH3yXC9uuzzlv0bbBk-TaxvlQiws1XFeErveLvcEiLMnxde2c0SpRFqmr4XK5JvHV_YQuAfpKwbq07J_UbNsmUPQVUfMeBth3N1sBoauv4nRx5XD-fEipAhd_yMzvsJ7Y`
+
+- `CesiumMilkTruck_1024B_vox.glb` (714 bytes, 952 chars, method `vox`, picked by auto, score 0.861)
+
+  `QJIf22byFjEQREZmREREZmRFERVVmYZm7v3d3du7u7MyZm7vER____mZNPm3__3d__u7u73d_____-8q0pFLu53d__3du7______3fF7N1F9eXEQAgqqZn____F61bF73fVURkzMrL______m9____________EQREZmREREZmRFEQzMZmREZmiIiIiIiIZmREZmqr3cZmZmZmZmZmZnEReV3d3deYIj3eAj______m5FNWXed______EQiIiJEQqqiIZmZmiIiIiIiIiIiIZmqrNOREREREZmRFERFR3d__F6IjOaAj_____-0HN09bF7vd____EQiIiJEQqqiIREiIiIiIiIiIiIZmiIzM8q7vFN3d__F6RE9aIj____3csFFNOa1bm9____EQiIiJEQzMZmREZmiIiIiIiIiIZmiIqrNwREREREZmRFMy0J3d__N6IjN6Ah_____-0osFWW1bvd____EQREZmREREZmRFEQ7MZmREZmiIiIiIiIZmREZmqr3cZmZmZmZmZmZnMRm73d__WcIj_-Ah______m3WW9beb______EQREZmREREZmRFERVVd2ZnMz3d3dmZu7MyZnERMz____mXNxeV__3d__u7d3u7______FNFMsFm5u7__3d3d________N297WXWc7uAizMaH____Wc969bvc7uiIzMqr______vd3d____3d3d3cAD6BPdUC_W6M3sxyWdYq6Pt-0s3RYp0mAnKmjj5xIOpI4nAX-t3-jW6bvBAdkQTWgBR_RPhu-FxIYfmdbBxyb8h9EKnxyKq-M2vVT6jKKs4VB98lwvbrs85b9G2wZPk2sb5UIsLNVxXhK73i73BIizJ8XXtnNEqURapq-FyuSbx1f2ELgH6SsG6tOyf1GzbJlD0FVHzHgbYdzdbAaGrr-J0ceVw_nxIqQIXf8jM77Ce2`

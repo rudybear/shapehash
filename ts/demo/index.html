@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ShapeHash demo</title>
+<style>
+  :root { --bg: #f4f3ee; --panel: #ffffff; --ink: #1a1a19; --muted: #6b6a63; --line: #d9d8d0; --accent: #2a78d6; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #1a1a19; --panel: #242422; --ink: #f0efec; --muted: #a3a299; --line: #3a3a37; --accent: #3987e5; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.4 system-ui, sans-serif; background: var(--bg); color: var(--ink); }
+  header { padding: 12px 16px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: end; border-bottom: 1px solid var(--line); }
+  h1 { font-size: 16px; margin: 0 12px 2px 0; }
+  label { display: flex; flex-direction: column; gap: 3px; font-size: 12px; color: var(--muted); }
+  select, input[type=file], button, textarea { font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 5px 8px; }
+  button { cursor: pointer; background: var(--accent); color: #fff; border-color: transparent; }
+  main { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 12px 16px; }
+  @media (max-width: 760px) { main { grid-template-columns: 1fr; } }
+  .view { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .view h2 { font-size: 12px; font-weight: 600; margin: 0; padding: 8px 10px; color: var(--muted); border-bottom: 1px solid var(--line); }
+  .view canvas { display: block; width: 100%; aspect-ratio: 4 / 3; }
+  section { padding: 0 16px 20px; }
+  textarea { width: 100%; min-height: 76px; font: 12px/1.4 ui-monospace, monospace; word-break: break-all; }
+  #stats { margin: 8px 0; color: var(--muted); min-height: 1.4em; }
+  #stats b { color: var(--ink); font-weight: 600; }
+  .row { display: flex; gap: 10px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
+  .err { color: #c0392b; }
+</style>
+</head>
+<body>
+<header>
+  <h1>ShapeHash demo</h1>
+  <label>Model<select id="model"></select></label>
+  <label>or your own .glb<input id="file" type="file" accept=".glb"></label>
+  <label>Budget<select id="budget"><option>32</option><option>64</option><option selected>128</option><option>256</option><option>512</option></select></label>
+  <label>Method<select id="method"><option value="auto">auto (best of three)</option><option>vox</option><option>sh</option><option>mesh</option></select></label>
+  <label>Vox rendering<select id="vox"><option value="smooth">smooth (surface nets)</option><option value="cubes">cubes</option></select></label>
+</header>
+<main>
+  <div class="view"><h2 id="t-orig">Original</h2><canvas id="c-orig"></canvas></div>
+  <div class="view"><h2 id="t-dec">Decoded placeholder</h2><canvas id="c-dec"></canvas></div>
+</main>
+<section>
+  <div id="stats">Loading…</div>
+  <label>Hash string (edit or paste any ShapeHash, then press Decode)
+    <textarea id="hash" spellcheck="false"></textarea>
+  </label>
+  <div class="row"><button id="decode">Decode this string</button><button id="download">Download placeholder .glb</button><span id="msg"></span></div>
+</section>
+<script type="module" src="dist/main.js"></script>
+</body>
+</html>

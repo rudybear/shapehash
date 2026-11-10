@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+# downloaded third-party assets (re-fetch with scripts/download_models.py)
+data/models/
+# bulky intermediates (re-create with scripts/run_eval.py)
+results/thumbs/
+results/v1/thumbs/
+results/v1ts/thumbs/
+# TypeScript build output and dependencies
+ts/node_modules/
+ts/dist/
+ts/demo/dist/
