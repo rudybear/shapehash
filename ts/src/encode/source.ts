@@ -346,8 +346,9 @@ export class Source {
   }
 
   /**
-   * Selection score in [0,1]: mean of F-score@0.05 and a colour term; with
-   * `full` (used to choose between methods) also a coarse silhouette IoU.
+   * Selection score in [0,1]. Inner searches use the mean of F-score@0.05 and a
+   * colour term. With `full` (used to choose between methods) it is the mean of
+   * F-score, colour term, a coarse silhouette IoU and normal consistency.
    */
   score(mesh: DecodedMesh, full = false): number {
     const colors = new Float32Array(mesh.colors.length);
@@ -361,18 +362,21 @@ export class Source {
     const lab = new Float64Array(n * 3);
     for (let i = 0; i < n; i++) rgbToLab(s.col[i * 3], s.col[i * 3 + 1], s.col[i * 3 + 2], lab, i * 3);
     const g = new PointGrid(p, n);
-    let rc = 0, pr = 0, de1 = 0, de2 = 0;
+    let rc = 0, pr = 0, de1 = 0, de2 = 0, nc1 = 0, nc2 = 0;
+    const gn = this.nrm, g0 = this.scoreStart * 3, dn = s.nrm;
     const dist = (a: Float64Array, i: number, b: Float64Array, j: number): number =>
       Math.sqrt((a[i] - b[j]) ** 2 + (a[i + 1] - b[j + 1]) ** 2 + (a[i + 2] - b[j + 2]) ** 2);
     for (let i = 0; i < this.scoreN; i++) {
       const j = g.nearest(this.scorePts[i * 3], this.scorePts[i * 3 + 1], this.scorePts[i * 3 + 2]);
       if (g.d2 < F_TAU * F_TAU) rc++;
       de1 += dist(this.scoreLab, i * 3, lab, j * 3);
+      nc1 += Math.abs(gn[g0 + i * 3] * dn[j * 3] + gn[g0 + i * 3 + 1] * dn[j * 3 + 1] + gn[g0 + i * 3 + 2] * dn[j * 3 + 2]);
     }
     for (let i = 0; i < n; i++) {
       const j = this.scoreGrid.nearest(p[i * 3], p[i * 3 + 1], p[i * 3 + 2]);
       if (this.scoreGrid.d2 < F_TAU * F_TAU) pr++;
       de2 += dist(lab, i * 3, this.scoreLab, j * 3);
+      nc2 += Math.abs(dn[i * 3] * gn[g0 + j * 3] + dn[i * 3 + 1] * gn[g0 + j * 3 + 1] + dn[i * 3 + 2] * gn[g0 + j * 3 + 2]);
     }
     rc /= this.scoreN; pr /= n;
     const f = (2 * pr * rc) / Math.max(pr + rc, 1e-9);
@@ -389,7 +393,8 @@ export class Source {
       }
       iou += inter / Math.max(uni, 1);
     }
-    return (f + ct + iou / 3) / 3;
+    const nc = 0.5 * (nc1 / this.scoreN + nc2 / n);
+    return (f + ct + iou / 3 + nc) / 4;
   }
 }
 

@@ -11,3 +11,7 @@ results/v1ts/thumbs/
 ts/node_modules/
 ts/dist/
 ts/demo/dist/
+# LPIPS experiment: network weights and render cache
+.cache/
+results/lpips/cache/
+results/lpips/cache_cand/

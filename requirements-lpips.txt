@@ -1,0 +1,5 @@
+# only needed for the LPIPS experiment (scripts/lpips_metrics.py); not used by the encoder or decoder
+torch==2.15.0
+torchvision==0.29.2
+lpips==0.1.4
+piq==0.8.0

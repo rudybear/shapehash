@@ -147,7 +147,8 @@ the same algorithms in TypeScript and Python:
   for each position precision 5–8 bits the largest vertex count that fits;
   keep the best-scoring one.
 - **selection**: decode all candidates and keep the highest mean of
-  F-score@0.05, colour term (CIELAB) and a 3-view 24x24 silhouette IoU.
+  F-score@0.05, colour term (CIELAB), a 3-view 24x24 silhouette IoU and normal
+  consistency (the last term was added after the LPIPS experiment below).
 
 The Python encoder (`hash3d/v1/encode.py`) is a slow reference (10–20 s per
 model and budget); the TypeScript encoder takes about 1 s.
@@ -192,18 +193,20 @@ F-score@0.05, silhouette IoU, render SSIM and a colour term). Full tables:
 | v1 `vox` alone, cube decode | 0.714 | 0.770 | 0.818 |
 | v1 `sh` alone | 0.692 | 0.730 | 0.765 |
 | v1 `mesh` alone | 0.693 | 0.781 | 0.824 |
-| **v1 union, Python encoder** | 0.777 | 0.823 | 0.853 |
-| **v1 union, TypeScript encoder** | 0.776 | 0.823 | 0.853 |
+| **v1 union, Python encoder** | 0.775 | 0.822 | 0.852 |
+| **v1 union, TypeScript encoder** | 0.775 | 0.823 | 0.852 |
 
 Other metrics for the TypeScript-encoded union (phase-1 `voxs` in brackets):
-Chamfer x100 3.65 / 2.75 / 2.49 (4.29 / 3.46 / 2.79); colour dE 14.7 / 13.4 /
-11.4 (21.5 / 19.0 / 17.2); silhouette IoU 0.852 / 0.877 / 0.894 (0.846 /
+Chamfer x100 3.63 / 2.78 / 2.52 (4.29 / 3.46 / 2.79); colour dE 14.7 / 13.3 /
+11.4 (21.5 / 19.0 / 17.2); silhouette IoU 0.853 / 0.877 / 0.893 (0.846 /
 0.876 / 0.898).
 
-Method kept by the TypeScript encoder, of 28 models: 64 B vox 21, sh 7,
-mesh 0; 128 B vox 15, sh 7, mesh 6; 256 B vox 20, sh 1, mesh 7. The
-point-based selection score lands within 0.002 of an oracle that picks by the
-full composite.
+Method kept by the TypeScript encoder, of 28 models: 64 B vox 22, sh 6,
+mesh 0; 128 B vox 16, sh 6, mesh 6; 256 B vox 21, sh 1, mesh 6. The
+point-based selection score lands within 0.003 of an oracle that picks by the
+full composite. (These numbers are with the selection score as it is now; the
+version before the LPIPS experiment scored 0.776 / 0.823 / 0.853 and kept sh
+for one more model at 64 and 128 B.)
 
 What changed since phase 1, and what it bought (all 28 models):
 
@@ -220,10 +223,12 @@ What changed since phase 1, and what it bought (all 28 models):
 
 Tuning and held-out data: models were split alternately into a tuning half
 and a held-out half (14 each). The one thing chosen by looking at scores was
-the form of the selection score (adding the silhouette term, dropping normal
-consistency), on the tuning half only. The vox search itself has no tuned
-constants beyond its candidate lists. On the held-out half the v1 union
-scores 0.799 / 0.842 / 0.863 at 64 / 128 / 256 B against 0.716 / 0.767 /
+the form of the selection score, on the tuning half only: first against the
+composite (which led to F-score + colour + silhouette), later against LPIPS on
+renders (which put normal consistency back in; see the LPIPS section). The vox
+search itself has no tuned constants beyond its candidate lists. On the
+held-out half the v1 union scores 0.798 / 0.841 / 0.864 at 64 / 128 / 256 B
+(TypeScript encoder) against 0.716 / 0.767 /
 0.814 for phase-1 `voxs`, so the gains are not an artefact of tuning. The
 thin-sheet threshold and occupancy contexts were carried over from phase 1,
 where they had been set on all 28 models.
@@ -241,11 +246,184 @@ Bundle sizes: decoder only 12.4 kB minified (5.5 kB gzip); decoder + encoder +
 GLB writer 41.9 kB (17.8 kB gzip). Encoder time in Node: about 0.9–1.1 s per
 budget (max 1.7 s) plus about 0.15 s once per model for loading and sampling.
 
+## LPIPS on renders (tried; useful as a judge, one small encoder change)
+
+A reader suggested LPIPS as a loss. For the 2-D sibling (DCTHash) it failed:
+at 28 characters the placeholder is pure blur and LPIPS is out of its range.
+For 3-D placeholders the answer is different. **LPIPS on multi-view renders is
+a usable quality judge here, and a better one than the composite score on the
+question that matters most (which of two crude shapes looks more like the
+object). It is not usable blindly, it does not see every artefact, and it did
+not earn a place in the encoder: the only shipped change is one extra
+hand-written term in the selection score.** Code: `scripts/lpips_*.py`; tables
+and sheets: `results/lpips/`; extra dependencies: `requirements-lpips.txt`.
+
+Setup: the harness renderer (orthographic, 256x256, white background, colour =
+albedo x headlight shading, six fixed views), LPIPS-AlexNet, LPIPS-VGG and
+DISTS, mean over views and over the 28 models. Variants: whole frame; cropped
+to the object and resized to 224 px (`crop`, used below unless stated);
+reference with its texture low-passed on the surface; reference image blurred;
+both rendered in uniform grey.
+
+**1. Sanity checks** (`results/lpips/sanity.md`), 128 bytes, lower is better:
+
+| | LPIPS-alex | LPIPS-vgg | DISTS |
+|---|---|---|---|
+| blank white image | 0.638 | 0.389 | 0.645 |
+| bounding box, mean colour | 0.565 | 0.450 | 0.392 |
+| ellipsoid in the bounding box | 0.465 | 0.402 | 0.394 |
+| convex hull (phase-1 `kdop`) | 0.399 | 0.359 | 0.318 |
+| phase-1 `sh` / `mesh` / `ellip` / `voxs` | 0.300 / 0.282 / 0.269 / 0.228 | 0.271 / 0.260 / 0.275 / 0.235 | 0.300 / 0.298 / 0.294 / 0.261 |
+| v1 vox cubes / vox smooth / union | 0.283 / 0.212 / 0.216 | 0.289 / 0.225 / 0.220 | 0.302 / 0.250 / 0.257 |
+| exact geometry, one flat colour | 0.146 | 0.140 | 0.186 |
+| exact geometry, texture low-passed | 0.074 | 0.081 | 0.125 |
+
+- Not saturated, unlike 2-D: bad baselines, placeholders and "right shape,
+  wrong texture" occupy clearly separate ranges, and every method improves
+  monotonically with budget from 32 to 512 B (per model, doubling the budget
+  made LPIPS-alex worse in 21 of 560 cases).
+- Geometry dominates, not texture: the exact shape with a blurred texture
+  scores 0.07, far below any placeholder. Exceptions are the heavily textured
+  models (BoomBox, DamagedHelmet, BoxTextured, CesiumMilkTruck), where texture
+  loss alone costs 0.2–0.3 and is half of the placeholder's score.
+- **LPIPS-VGG fails the blank-image check**: it rates an empty white image
+  better than the bounding box on 23 of 28 models, better than the ellipsoid
+  on 20 and better than the convex hull on 12, even after cropping. It
+  punishes excess geometry more than missing geometry. LPIPS-alex does so on 7
+  models (box only); DISTS never.
+- The object covers 17 % of the frame on average, and whole-frame scores
+  correlate with coverage (Spearman +0.56 to +0.72 across models), so
+  whole-frame numbers mostly measure how big the object is. Cropping reduces
+  that (+0.36 / +0.47 / +0.10). Scores are comparable between methods on one
+  model, not between models.
+- The 2-D fix (blurring the reference) is harmful here: it compresses the
+  range and makes AlexNet prefer a blank image to the box on 17 models.
+
+**2. Agreement with the composite and with eyes** (`agreement.md`,
+`artefacts.md`). Rank correlation between the composite and LPIPS across 13
+placeholders per model and budget is +0.84 (alex), +0.86 (vgg), +0.70 (DISTS);
+alex and vgg agree with each other at +0.90. They disagree on the best
+phase-1 method for 12 (alex), 9–13 (vgg) and 16–18 (DISTS) of 28 models per
+budget. The disagreement is systematic: the composite's wins go to `ellip` and
+`sh` (8 and 8 of 28 at 128 B), LPIPS's to `voxs` (13 of 28), which is what the
+phase-1 write-up recommended by eye against its own composite.
+
+- **ellip ("pile of scales")**: VGG and DISTS penalise it, increasingly with
+  budget: mean rank among 9 methods at 512 B is 2.7 by composite, 4.5 by VGG,
+  4.9 by DISTS; ellip beats `voxs` on 10 models by composite and on 2–3 by
+  VGG/DISTS. AlexNet only half-sees it (rank 3.5) and still picks ellip with
+  visible gaps on DamagedHelmet and BarramundiFish.
+- **sh on non-star shapes**: all metrics agree it is worst (table, torus,
+  chairs, sunglasses); no disagreement to resolve.
+- **Thin-rod gaps in smooth vox: not detected.** On SheenChair at 128 B the
+  candidate with broken legs scores better (alex 0.190, vgg 0.233) than the
+  one with connected legs (0.205, 0.239). Smooth beats cubes on every
+  thin-legged model under every network, gaps or not.
+- My read of `disagree_phase1_128.png` (13 models where the picks differ at
+  128 B): LPIPS's pick looks better on about 7 (CesiumMilkTruck, Corset, Fox,
+  SheenChair, Suzanne, ToyCar, GlamVelvetSofa), the composite's on 2
+  (BoxTextured; BarramundiFish against AlexNet's ellip pick), 4 are toss-ups.
+  The composite over-rewards F-score at a 2.5 % threshold, which a few large
+  triangles or blobs lying inside the object satisfy.
+
+**3. LPIPS as the union selection criterion** (`selection.md`). Picking
+vox / sh / mesh by LPIPS-alex instead of the point-based score changes 5 / 8 /
+9 of 28 picks at 64 / 128 / 256 B, almost all towards vox:
+
+| 128 B, all 28 models | picks vox/sh/mesh | composite | F@0.05 | sil IoU | normal cons. | LPIPS-alex | LPIPS-vgg | DISTS |
+|---|---|---|---|---|---|---|---|---|
+| score before this experiment | 15/6/7 | 0.823 | 0.883 | 0.873 | 0.855 | 0.221 | 0.222 | 0.262 |
+| select by LPIPS-alex | 23/3/2 | 0.818 | 0.855 | 0.881 | 0.870 | 0.206 | 0.217 | 0.247 |
+| select by LPIPS-vgg | 19/3/6 | 0.814 | 0.854 | 0.881 | 0.859 | 0.209 | 0.215 | 0.247 |
+| select by DISTS | 22/4/2 | 0.809 | 0.836 | 0.872 | 0.855 | 0.210 | 0.219 | 0.245 |
+| score now (+ normal consistency) | 17/6/5 | 0.822 | 0.876 | 0.877 | 0.861 | 0.216 | 0.220 | 0.257 |
+
+On metrics not used to select, LPIPS selection trades F-score (-0.03) and
+composite (-0.005) for silhouette IoU and normal consistency (+0.01 each) and
+improves the other two networks slightly. The numbers alone do not settle it.
+The sheet does: in `selection_changes.png` (every changed pick at 64 / 128 /
+256 B, 22 for AlexNet) the AlexNet pick looks clearly better in about 17
+cases and clearly worse in none; typical cases are a 4-vertex sliver or two
+slabs replaced by a recognisable figure or chair (BrainStem, SheenChair,
+ChairDamaskPurplegold, Corset, Suzanne, WaterBottle). The picks that only VGG
+or only DISTS would change are worse more often than better (sh for
+IridescenceLamp and the plant; mesh for the dumbbell).
+
+**What that changed in the encoder.** A selection score with no network that
+follows the AlexNet picks was fitted on the tuning half
+(`selection_score.md`): adding normal consistency to the existing three terms
+raises agreement with the AlexNet pick from 35 to 40 of 42 on the tuning half
+and from 33 to 36 of 42 on the held-out half, where it also improves VGG
+(0.2211 -> 0.2193) and DISTS (0.2572 -> 0.2524) and leaves the composite
+unchanged (0.8345 -> 0.8335). Dropping the F-score altogether fits the tuning
+half perfectly but loses 0.009 composite on held-out, so it was not taken.
+The selection score in both encoders is now the mean of F-score, colour
+term, silhouette IoU and normal consistency. The effect is small and should
+not be oversold:
+
+- Python encoder: 4 / 2 / 3 of 28 picks change at 64 / 128 / 256 B
+  (`selection_nc_changes.png`); 7 look clearly better, 2 are toss-ups, none
+  worse. LPIPS-alex 0.247 / 0.221 / 0.189 -> 0.240 / 0.216 / 0.186; composite
+  0.777 / 0.823 / 0.853 -> 0.775 / 0.822 / 0.852. At 512 B two more picks
+  change and one of them (BarramundiFish, vox -> sh) is worse.
+- TypeScript encoder: 5 of 84 picks change (`selection_ts_changes.png`); 4
+  look better (Suzanne at 64 and 128 B, the shoe, AntiqueCamera), 1 worse
+  (the plant at 64 B, vox -> sh). Mean LPIPS and composite are unchanged to
+  three decimals. It already avoided the worst mesh picks before.
+
+  ![Picks changed by the new selection score, TypeScript encoder](results/lpips/selection_ts_changes.png)
+
+- No format change; existing strings decode as before. Reverting is one line
+  in `Source.score` (`ts/src/encode/source.ts`) and `score` in
+  `hash3d/v1/encode.py`.
+
+**4. LPIPS to tune encoder choices** (`tuning.md`). Two discrete searches were
+re-run with other settings and judged by LPIPS, with the tuning / held-out
+split:
+
+- vox geometry-versus-colour weight (shipped 0.5): anything from 0.15 to 0.6
+  is within 0.002 LPIPS of the shipped setting on both halves, for all three
+  networks; the extremes are clearly worse (geometry only: 0.268 against
+  0.208 at 128 B held-out, because colour is thrown away; colour only: 0.249).
+  A per-model oracle over nine weights gains 0.002–0.006. No change.
+- mesh position precision: the encoder's own choice (5 bits for most models,
+  more vertices instead of more precision) matches what LPIPS prefers; a
+  per-model oracle gains at most 0.005. No change.
+
+**Why it works here and not in 2-D.** A 3-D placeholder render has a real
+silhouette, real shading and flat colour regions, and so does the reference;
+the two images differ in shape, which is what the networks' early and middle
+layers respond to. A 28-character image placeholder is a blur of a textured
+photograph and differs from it in everything. The 3-D result is still
+conditional: crop to the object, use AlexNet (or all three and distrust
+disagreement), compare only within a model, and do not expect it to notice
+missing thin parts.
+
+**Not done, and whether it would be worth it.** Gradient descent through a
+differentiable renderer with an LPIPS loss was not built. I do not think it is
+worthwhile for this format: the payloads are discrete (grid sizes, palette
+indices, strip connectivity), LPIPS barely distinguishes the candidates the
+discrete searches already produce (item 4), VGG's preference for missing over
+excess geometry would be exploited by an optimiser exactly as in the 2-D
+experiment, and it would not fix the artefact that most needs fixing (rod
+gaps), which LPIPS does not see. A network in the TypeScript encoder is not
+justified either: the hand-written score recovers most of the agreement.
+What LPIPS is good for here is what it was used for: an independent judge
+that exposed a blind spot in a hand-made metric.
+
+**Caveats.** 28 models; AlexNet / VGG / DISTS are one family of ImageNet
+features, so "judged by a metric not used to select" is weaker between them
+than against the geometric metrics; the visual verdicts are mine, from the
+sheets named above, at 128–160 px per view; renders are unlit albedo with a
+headlight; the composite's weaknesses found here also apply to the phase-1
+ranking further down (it flattered `ellip` and under-rated `voxs`), which the
+phase-1 text already suspected by eye.
+
 ## Honest limits
 
 - **The union buys less than expected.** Once vox colour was fixed, vox alone
-  is within 0.005–0.013 of the union (0.764 vs 0.777 at 64 B, 0.848 vs 0.853
-  at 256 B). `sh` is kept for 7 of 28 models at 64–128 B and 1 at 256 B. If
+  is within 0.004–0.012 of the union (0.764 vs 0.775 at 64 B, 0.848 vs 0.852
+  at 256 B). `sh` is kept for 6 of 28 models at 64–128 B and 1 at 256 B. If
   decoder size matters more than the last percent, a vox-only or vox+mesh
   profile is defensible; the format allows it (unknown methods are simply
   never emitted).
@@ -308,6 +486,8 @@ hash3d/codecs/v1.py      adapters into the evaluation harness
 scripts/make_vectors.py  Python -> ts/test/vectors/vectors.json
 scripts/crosscheck_ts.py Python check of TypeScript-encoded strings
 scripts/report_v1.py     results/v1/summary.md and sheets
+scripts/lpips_*.py       LPIPS experiment: render, metrics (torch), candidates, analysis
+results/lpips/           its tables (*.md), sheets (*.png), metrics.csv
 results/v1/              summary.md, sheets/, examples/, demo/ screenshots, ts_encoded.json, raw/
 results/v1ts/            evaluation of the TypeScript-encoded strings
 ```

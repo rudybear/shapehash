@@ -112,9 +112,11 @@ def silhouettes(p):
     return out
 
 
-def score(src, dec, full=False):
-    """Selection score in [0,1]: mean of F-score@0.05 and a colour term, plus
-    (full=True, used to pick between methods) a coarse silhouette IoU."""
+def score(src, dec, full=False, parts=None):
+    """Selection score in [0,1].  Inner searches use the mean of F-score@0.05
+    and a colour term.  With full=True (used to pick between methods) it is the
+    mean of F-score, colour term, a coarse silhouette IoU and normal
+    consistency.  `parts`, if given, receives the individual terms."""
     s = sample_mesh(dec.positions, dec.indices.astype(np.int64), dec.colors, N_SCORE, 7)
     if s is None:
         return 0.0
@@ -131,7 +133,11 @@ def score(src, dec, full=False):
     if "sil" not in src.cache:
         src.cache["sil"] = silhouettes(src.pts[src.sc])
     sil = float(np.mean([(a & b).sum() / max((a | b).sum(), 1) for a, b in zip(src.cache["sil"], silhouettes(p))]))
-    return (f + ct + sil) / 3.0
+    gn = src.nrm[src.sc]
+    nc = 0.5 * float(np.abs(np.einsum("ij,ij->i", gn, n[i1])).mean() + np.abs(np.einsum("ij,ij->i", n, gn[i2])).mean())
+    if parts is not None:
+        parts.update(f=f, col=ct, sil=sil, nc=nc)
+    return (f + ct + sil + nc) / 4.0
 
 
 def header(method, param, eq):
@@ -224,7 +230,8 @@ def _encode_cells_palette(rc, act, idx, pb, limit):
     return True
 
 
-def encode_vox(src, budget):
+def encode_vox(src, budget, collect=None):
+    """collect: optional list that receives every feasible candidate (experiments only)."""
     e, eq = src.e, src.eq
     if "palettes" not in src.cache:
         src.cache["palettes"] = make_palettes(src)
@@ -304,11 +311,14 @@ def encode_vox(src, budget):
                     continue
                 de = np.linalg.norm(flab[in_act] - rgb_to_lab(cell8[ci[in_act, 0], ci[in_act, 1], ci[in_act, 2]] / 255.0), axis=1).mean() if in_act.any() else 40.0
                 j = 0.5 * (gscore + 1 - min(de, 40.0) / 40.0)
-                if best is None or j > best[0] + 1e-12:
+                if collect is not None or best is None or j > best[0] + 1e-12:
                     w = header(F.METHOD_VOX, cm, eq)
                     for d in dims:
                         w.write(int(d) - 1, 6)
                     w.write(f - 1, 4)
+                    if collect is not None:
+                        collect.append({"dims": [int(d) for d in dims], "f": f, "cm": cm, "g": gscore, "c": 1 - min(de, 40.0) / 40.0, "hash": F.to_string(w.to_bytes() + data)})
+                if best is None or j > best[0] + 1e-12:
                     best = (j, w.to_bytes() + data)
     if best is None:
         return None
@@ -671,7 +681,7 @@ def mesh_payload(src, V, T, pb, budget, color_fn):
     return F.to_string(w.to_bytes())
 
 
-def encode_mesh(src, budget):
+def encode_mesh(src, budget, collect=None):
     if "qem" not in src.cache:
         occ = src.solid(64, [-1.03] * 3, [1.03] * 3)
         v, t = surface_nets(blur_field(occ, 2, 2))
@@ -707,6 +717,8 @@ def encode_mesh(src, budget):
         if found is None:
             continue
         j = score(src, decode(found))
+        if collect is not None:
+            collect.append({"pb": pb, "j": j, "hash": found})
         if best is None or j > best[0]:
             best = (j, found)
     return best[1] if best else None
